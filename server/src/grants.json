@@ -1,0 +1,1970 @@
+[
+  {
+    "role": "salesPerson",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "User",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "User",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "User",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "User",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "User",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Company",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Company",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Company",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Company",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Employee",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Employee",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Employee",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Employee",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Employee",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Equidev",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Equidev",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Equidev",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Equidev",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Equidev",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "EquipmentSale",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "EquipmentSale",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "EquipmentSale",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "EquipmentSale",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "EquipmentSale",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "EquipmentSale",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "EquipmentSale",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "EquipmentSale",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Installation",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Installation",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Installation",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Installation",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Installation",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "MaintRepair",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "MaintRepair",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "MaintRepair",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "MaintRepair",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "MaintRepair",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "SparePart",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "SparePart",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "SparePart",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "SparePart",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "SparePart",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "TaskPlanner",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "TaskPlanner",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "TaskPlanner",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "TaskPlanner",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "TaskPlanner",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Ticket",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Ticket",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Ticket",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Ticket",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "Ticket",
+    "action": "read:any",
+    "attributes": "*"
+  }
+]
