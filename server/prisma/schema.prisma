@@ -1,0 +1,202 @@
+datasource postgres {
+  provider = "postgresql"
+  url      = env("POSTGRESQL_URL")
+}
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+model User {
+  createdAt DateTime @default(now())
+  firstName String?
+  id        String   @id @default(cuid())
+  lastName  String?
+  password  String
+  roles     String[]
+  updatedAt DateTime @updatedAt
+  username  String   @unique
+}
+
+model Company {
+  companyAddress    String?
+  companyDepartment String
+  companyName       String
+  companyPhone      Float
+  companyType       EnumCompanyCompanyType?
+  createdAt         DateTime                @default(now())
+  employees         Employee[]
+  equipments        Equidev[]
+  equipmentSales    EquipmentSale[]
+  id                String                  @id @default(cuid())
+  installations     Installation[]
+  maintRepairs      MaintRepair[]
+  spareParts        SparePart[]
+  tickets           Ticket[]
+  updatedAt         DateTime                @updatedAt
+}
+
+model Employee {
+  companyId          Company?                       @relation(fields: [companyIdId], references: [id])
+  companyIdId        String?
+  createdAt          DateTime                       @default(now())
+  employeeAge        String?
+  employeeDepartment String
+  employeeEmail      String
+  employeeName       String?
+  employeePhone      Int
+  employeePosition   EnumEmployeeEmployeePosition[]
+  equipmentSales     EquipmentSale[]
+  id                 String                         @id @default(cuid())
+  installations      Installation[]
+  maintRepairs       MaintRepair[]
+  taskPlanners       TaskPlanner[]
+  updatedAt          DateTime                       @updatedAt
+}
+
+model Equidev {
+  companyId           Company?       @relation(fields: [companyIdId], references: [id])
+  companyIdId         String?
+  countryOfOrign      String?
+  createdAt           DateTime       @default(now())
+  equipmentSales      EquipmentSale? @relation(fields: [equipmentSalesId], references: [id])
+  equipmentSalesId    String?
+  hasSparePart        Boolean?
+  id                  String         @id @default(cuid())
+  installations       Installation
+  maintRepairs        MaintRepair
+  manufacturerName    String?
+  model               String?
+  serialNumber        String?
+  shipmentArrivalDate DateTime?
+  spareParts          SparePart[]
+  tickets             Ticket[]
+  updatedAt           DateTime       @updatedAt
+}
+
+model EquipmentSale {
+  companyId          Company?  @relation(fields: [companyIdId], references: [id])
+  companyIdId        String?
+  createdAt          DateTime  @default(now())
+  daysSoldtoCustomer DateTime?
+  employeeId         Employee? @relation(fields: [employeeIdId], references: [id])
+  employeeIdId       String?
+  equipmentId        Equidev[]
+  id                 String    @id @default(cuid())
+  nameOfSalesPerson  String?
+  updatedAt          DateTime  @updatedAt
+  valueOfTransaction Float?
+}
+
+model Installation {
+  commissionDate                   DateTime?
+  companyId                        Company    @relation(fields: [companyIdId], references: [id])
+  companyIdId                      String
+  createdAt                        DateTime   @default(now())
+  employeeId                       Employee[]
+  equipmentId                      Equidev?   @relation(fields: [equipmentIdId], references: [id])
+  equipmentIdId                    String?
+  id                               String     @id @default(cuid())
+  installationStartDate            DateTime
+  nameOfCompanyEqInstalled         String
+  nameOfTechnicalEngineerInstalled String
+  updatedAt                        DateTime   @updatedAt
+}
+
+model MaintRepair {
+  actionTaken                     String?
+  companyId                       Company?   @relation(fields: [companyIdId], references: [id])
+  companyIdId                     String?
+  createdAt                       DateTime   @default(now())
+  dateOfCeoApproval               DateTime?
+  employeeId                      Employee[]
+  equipmentId                     Equidev?   @relation(fields: [equipmentIdId], references: [id])
+  equipmentIdId                   String?
+  faultType                       String
+  id                              String     @id @default(cuid())
+  lasttimeOfGoodOperation         DateTime?
+  nameOfBmeApprovedMaintClearance String?
+  nameOfTechMaintainEq            String?
+  possibleCause                   String?
+  updatedAt                       DateTime   @updatedAt
+}
+
+model SparePart {
+  companyId           Company?  @relation(fields: [companyIdId], references: [id])
+  companyIdId         String?
+  createdAt           DateTime  @default(now())
+  equipmentId         Equidev?  @relation(fields: [equipmentIdId], references: [id])
+  equipmentIdId       String?
+  estimatedExpireDate DateTime?
+  hasSerialNumber     Boolean?
+  id                  String    @id @default(cuid())
+  nameOfSparePart     String?
+  partNumber          String?
+  serialNumber        String?
+  updatedAt           DateTime  @updatedAt
+}
+
+model TaskPlanner {
+  createdAt        DateTime                      @default(now())
+  employeeAssigned String?
+  employeeid       Employee?                     @relation(fields: [employeeidId], references: [id])
+  employeeidId     String?
+  id               String                        @id @default(cuid())
+  priorityLevel    EnumTaskPlannerPriorityLevel?
+  taskEndDate      DateTime
+  taskStartDate    DateTime
+  taskStatus       EnumTaskPlannerTaskStatus?
+  ticketId         Ticket?                       @relation(fields: [ticketIdId], references: [id])
+  ticketIdId       String?
+  ticketNumber     Int
+  updatedAt        DateTime                      @updatedAt
+}
+
+model Ticket {
+  companyId          Company?                @relation(fields: [companyIdId], references: [id])
+  companyIdId        String?
+  createdAt          DateTime                @default(now())
+  equipmentId        Equidev?                @relation(fields: [equipmentIdId], references: [id])
+  equipmentIdId      String?
+  id                 String                  @id @default(cuid())
+  isPrimeCustomer    Boolean?
+  nameOfCustomer     String?
+  nameOfEquipment    String
+  requisitionDate    DateTime?
+  requisitionDetails String?
+  requisitionType    String?
+  taskPlanners       TaskPlanner
+  ticketStatus       EnumTicketTicketStatus?
+  updatedAt          DateTime                @updatedAt
+}
+
+enum EnumCompanyCompanyType {
+  Customer
+  Supplier
+  Institution
+}
+
+enum EnumEmployeeEmployeePosition {
+  Ceo
+  Engineer
+  Technician
+  Sales
+}
+
+enum EnumTaskPlannerPriorityLevel {
+  High
+  Middium
+  Low
+}
+
+enum EnumTaskPlannerTaskStatus {
+  Open
+  Done
+  Closed
+}
+
+enum EnumTicketTicketStatus {
+  Done
+  Open
+  Closed
+}
