@@ -9,12 +9,16 @@ import {
   TextInput,
   BooleanInput,
   DateTimeInput,
+  ReferenceArrayInput,
+  SelectArrayInput,
 } from "react-admin";
 
 import { CompanyTitle } from "../company/CompanyTitle";
 import { EquipmentSaleTitle } from "../equipmentSale/EquipmentSaleTitle";
 import { InstallationTitle } from "../installation/InstallationTitle";
 import { MaintRepairTitle } from "../maintRepair/MaintRepairTitle";
+import { SparePartTitle } from "../sparePart/SparePartTitle";
+import { TicketTitle } from "../ticket/TicketTitle";
 
 export const EquidevCreate = (props: CreateProps): React.ReactElement => {
   return (
@@ -57,6 +61,22 @@ export const EquidevCreate = (props: CreateProps): React.ReactElement => {
           label="ShipmentArrivalDate"
           source="shipmentArrivalDate"
         />
+        <ReferenceArrayInput
+          source="spareParts"
+          reference="SparePart"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={SparePartTitle} />
+        </ReferenceArrayInput>
+        <ReferenceArrayInput
+          source="tickets"
+          reference="Ticket"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={TicketTitle} />
+        </ReferenceArrayInput>
       </SimpleForm>
     </Create>
   );

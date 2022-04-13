@@ -7,12 +7,15 @@ import {
   ReferenceInput,
   SelectInput,
   DateInput,
+  ReferenceArrayInput,
+  SelectArrayInput,
   TextInput,
   NumberInput,
 } from "react-admin";
 
 import { CompanyTitle } from "../company/CompanyTitle";
 import { EmployeeTitle } from "../employee/EmployeeTitle";
+import { EquidevTitle } from "../equidev/EquidevTitle";
 
 export const EquipmentSaleEdit = (props: EditProps): React.ReactElement => {
   return (
@@ -33,6 +36,14 @@ export const EquipmentSaleEdit = (props: EditProps): React.ReactElement => {
         >
           <SelectInput optionText={EmployeeTitle} />
         </ReferenceInput>
+        <ReferenceArrayInput
+          source="equipmentId"
+          reference="Equidev"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={EquidevTitle} />
+        </ReferenceArrayInput>
         <TextInput label="NameOfSalesPerson" source="nameOfSalesPerson" />
         <NumberInput label="ValueOfTransaction" source="valueOfTransaction" />
       </SimpleForm>
