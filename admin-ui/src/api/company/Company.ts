@@ -1,3 +1,4 @@
+import { CompanyType } from "../companyType/CompanyType";
 import { Employee } from "../employee/Employee";
 import { Equidev } from "../equidev/Equidev";
 import { EquipmentSale } from "../equipmentSale/EquipmentSale";
@@ -11,7 +12,7 @@ export type Company = {
   companyDepartment: string;
   companyName: string;
   companyPhone: number;
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyType | null;
   createdAt: Date;
   employees?: Array<Employee>;
   equipments?: Array<Equidev>;

@@ -61,7 +61,7 @@ class CompanyOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  companyType?: SortOrder;
+  companyTypeId?: SortOrder;
 
   @ApiProperty({
     required: false,

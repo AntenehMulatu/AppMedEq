@@ -45,6 +45,10 @@ import { TicketList } from "./ticket/TicketList";
 import { TicketCreate } from "./ticket/TicketCreate";
 import { TicketEdit } from "./ticket/TicketEdit";
 import { TicketShow } from "./ticket/TicketShow";
+import { CompanyTypeList } from "./companyType/CompanyTypeList";
+import { CompanyTypeCreate } from "./companyType/CompanyTypeCreate";
+import { CompanyTypeEdit } from "./companyType/CompanyTypeEdit";
+import { CompanyTypeShow } from "./companyType/CompanyTypeShow";
 import { jwtAuthProvider } from "./auth-provider/ra-auth-jwt";
 
 const App = (): React.ReactElement => {
@@ -140,6 +144,13 @@ const App = (): React.ReactElement => {
           edit={TicketEdit}
           create={TicketCreate}
           show={TicketShow}
+        />
+        <Resource
+          name="CompanyType"
+          list={CompanyTypeList}
+          edit={CompanyTypeEdit}
+          create={CompanyTypeCreate}
+          show={CompanyTypeShow}
         />
       </Admin>
     </div>

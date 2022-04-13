@@ -412,12 +412,6 @@ export class EquipmentSaleControllerBase {
           },
         },
 
-        maintRepairs: {
-          select: {
-            id: true,
-          },
-        },
-
         manufacturerName: true,
         model: true,
         serialNumber: true,

@@ -1,3 +1,4 @@
+import { CompanyTypeWhereUniqueInput } from "../companyType/CompanyTypeWhereUniqueInput";
 import { EmployeeUpdateManyWithoutCompaniesInput } from "./EmployeeUpdateManyWithoutCompaniesInput";
 import { EquidevUpdateManyWithoutCompaniesInput } from "./EquidevUpdateManyWithoutCompaniesInput";
 import { EquipmentSaleUpdateManyWithoutCompaniesInput } from "./EquipmentSaleUpdateManyWithoutCompaniesInput";
@@ -11,7 +12,7 @@ export type CompanyUpdateInput = {
   companyDepartment?: string;
   companyName?: string;
   companyPhone?: number;
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyTypeWhereUniqueInput | null;
   employees?: EmployeeUpdateManyWithoutCompaniesInput;
   equipments?: EquidevUpdateManyWithoutCompaniesInput;
   equipmentSales?: EquipmentSaleUpdateManyWithoutCompaniesInput;

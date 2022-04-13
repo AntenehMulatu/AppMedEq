@@ -22,7 +22,7 @@ import {
 import { Type } from "class-transformer";
 import { EquipmentSaleWhereUniqueInput } from "../../equipmentSale/base/EquipmentSaleWhereUniqueInput";
 import { InstallationWhereUniqueInput } from "../../installation/base/InstallationWhereUniqueInput";
-import { MaintRepairWhereUniqueInput } from "../../maintRepair/base/MaintRepairWhereUniqueInput";
+import { MaintRepairCreateNestedManyWithoutEquidevsInput } from "./MaintRepairCreateNestedManyWithoutEquidevsInput";
 import { SparePartCreateNestedManyWithoutEquidevsInput } from "./SparePartCreateNestedManyWithoutEquidevsInput";
 import { TicketCreateNestedManyWithoutEquidevsInput } from "./TicketCreateNestedManyWithoutEquidevsInput";
 @InputType()
@@ -87,15 +87,15 @@ class EquidevCreateInput {
 
   @ApiProperty({
     required: false,
-    type: () => MaintRepairWhereUniqueInput,
+    type: () => MaintRepairCreateNestedManyWithoutEquidevsInput,
   })
   @ValidateNested()
-  @Type(() => MaintRepairWhereUniqueInput)
+  @Type(() => MaintRepairCreateNestedManyWithoutEquidevsInput)
   @IsOptional()
-  @Field(() => MaintRepairWhereUniqueInput, {
+  @Field(() => MaintRepairCreateNestedManyWithoutEquidevsInput, {
     nullable: true,
   })
-  maintRepairs?: MaintRepairWhereUniqueInput;
+  maintRepairs?: MaintRepairCreateNestedManyWithoutEquidevsInput;
 
   @ApiProperty({
     required: false,

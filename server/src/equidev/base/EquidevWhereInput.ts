@@ -19,7 +19,7 @@ import { EquipmentSaleWhereUniqueInput } from "../../equipmentSale/base/Equipmen
 import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { InstallationWhereUniqueInput } from "../../installation/base/InstallationWhereUniqueInput";
-import { MaintRepairWhereUniqueInput } from "../../maintRepair/base/MaintRepairWhereUniqueInput";
+import { MaintRepairListRelationFilter } from "../../maintRepair/base/MaintRepairListRelationFilter";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { SparePartListRelationFilter } from "../../sparePart/base/SparePartListRelationFilter";
 import { TicketListRelationFilter } from "../../ticket/base/TicketListRelationFilter";
@@ -96,15 +96,15 @@ class EquidevWhereInput {
 
   @ApiProperty({
     required: false,
-    type: () => MaintRepairWhereUniqueInput,
+    type: () => MaintRepairListRelationFilter,
   })
   @ValidateNested()
-  @Type(() => MaintRepairWhereUniqueInput)
+  @Type(() => MaintRepairListRelationFilter)
   @IsOptional()
-  @Field(() => MaintRepairWhereUniqueInput, {
+  @Field(() => MaintRepairListRelationFilter, {
     nullable: true,
   })
-  maintRepairs?: MaintRepairWhereUniqueInput;
+  maintRepairs?: MaintRepairListRelationFilter;
 
   @ApiProperty({
     required: false,

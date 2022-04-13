@@ -1,6 +1,7 @@
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { FloatFilter } from "../../util/FloatFilter";
+import { CompanyTypeWhereUniqueInput } from "../companyType/CompanyTypeWhereUniqueInput";
 import { EmployeeListRelationFilter } from "../employee/EmployeeListRelationFilter";
 import { EquidevListRelationFilter } from "../equidev/EquidevListRelationFilter";
 import { EquipmentSaleListRelationFilter } from "../equipmentSale/EquipmentSaleListRelationFilter";
@@ -14,7 +15,7 @@ export type CompanyWhereInput = {
   companyDepartment?: StringFilter;
   companyName?: StringFilter;
   companyPhone?: FloatFilter;
-  companyType?: "Customer" | "Supplier" | "Institution";
+  companyType?: CompanyTypeWhereUniqueInput;
   employees?: EmployeeListRelationFilter;
   equipments?: EquidevListRelationFilter;
   equipmentSales?: EquipmentSaleListRelationFilter;

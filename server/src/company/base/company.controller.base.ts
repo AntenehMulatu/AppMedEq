@@ -91,13 +91,27 @@ export class CompanyControllerBase {
       );
     }
     return await this.service.create({
-      data: data,
+      data: {
+        ...data,
+
+        companyType: data.companyType
+          ? {
+              connect: data.companyType,
+            }
+          : undefined,
+      },
       select: {
         companyAddress: true,
         companyDepartment: true,
         companyName: true,
         companyPhone: true,
-        companyType: true,
+
+        companyType: {
+          select: {
+            id: true,
+          },
+        },
+
         createdAt: true,
         id: true,
         updatedAt: true,
@@ -138,7 +152,13 @@ export class CompanyControllerBase {
         companyDepartment: true,
         companyName: true,
         companyPhone: true,
-        companyType: true,
+
+        companyType: {
+          select: {
+            id: true,
+          },
+        },
+
         createdAt: true,
         id: true,
         updatedAt: true,
@@ -178,7 +198,13 @@ export class CompanyControllerBase {
         companyDepartment: true,
         companyName: true,
         companyPhone: true,
-        companyType: true,
+
+        companyType: {
+          select: {
+            id: true,
+          },
+        },
+
         createdAt: true,
         id: true,
         updatedAt: true,
@@ -233,13 +259,27 @@ export class CompanyControllerBase {
     try {
       return await this.service.update({
         where: params,
-        data: data,
+        data: {
+          ...data,
+
+          companyType: data.companyType
+            ? {
+                connect: data.companyType,
+              }
+            : undefined,
+        },
         select: {
           companyAddress: true,
           companyDepartment: true,
           companyName: true,
           companyPhone: true,
-          companyType: true,
+
+          companyType: {
+            select: {
+              id: true,
+            },
+          },
+
           createdAt: true,
           id: true,
           updatedAt: true,
@@ -280,7 +320,13 @@ export class CompanyControllerBase {
           companyDepartment: true,
           companyName: true,
           companyPhone: true,
-          companyType: true,
+
+          companyType: {
+            select: {
+              id: true,
+            },
+          },
+
           createdAt: true,
           id: true,
           updatedAt: true,
@@ -529,12 +575,6 @@ export class CompanyControllerBase {
         id: true,
 
         installations: {
-          select: {
-            id: true,
-          },
-        },
-
-        maintRepairs: {
           select: {
             id: true,
           },

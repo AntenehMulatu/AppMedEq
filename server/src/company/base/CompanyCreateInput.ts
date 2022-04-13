@@ -15,12 +15,11 @@ import {
   IsString,
   IsOptional,
   IsNumber,
-  IsEnum,
   ValidateNested,
 } from "class-validator";
-import { EnumCompanyCompanyType } from "./EnumCompanyCompanyType";
-import { EmployeeCreateNestedManyWithoutCompaniesInput } from "./EmployeeCreateNestedManyWithoutCompaniesInput";
+import { CompanyTypeWhereUniqueInput } from "../../companyType/base/CompanyTypeWhereUniqueInput";
 import { Type } from "class-transformer";
+import { EmployeeCreateNestedManyWithoutCompaniesInput } from "./EmployeeCreateNestedManyWithoutCompaniesInput";
 import { EquidevCreateNestedManyWithoutCompaniesInput } from "./EquidevCreateNestedManyWithoutCompaniesInput";
 import { EquipmentSaleCreateNestedManyWithoutCompaniesInput } from "./EquipmentSaleCreateNestedManyWithoutCompaniesInput";
 import { InstallationCreateNestedManyWithoutCompaniesInput } from "./InstallationCreateNestedManyWithoutCompaniesInput";
@@ -66,14 +65,15 @@ class CompanyCreateInput {
 
   @ApiProperty({
     required: false,
-    enum: EnumCompanyCompanyType,
+    type: () => CompanyTypeWhereUniqueInput,
   })
-  @IsEnum(EnumCompanyCompanyType)
+  @ValidateNested()
+  @Type(() => CompanyTypeWhereUniqueInput)
   @IsOptional()
-  @Field(() => EnumCompanyCompanyType, {
+  @Field(() => CompanyTypeWhereUniqueInput, {
     nullable: true,
   })
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyTypeWhereUniqueInput | null;
 
   @ApiProperty({
     required: false,

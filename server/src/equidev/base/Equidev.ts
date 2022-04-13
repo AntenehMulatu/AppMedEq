@@ -94,12 +94,12 @@ class Equidev {
 
   @ApiProperty({
     required: false,
-    type: () => MaintRepair,
+    type: () => [MaintRepair],
   })
   @ValidateNested()
   @Type(() => MaintRepair)
   @IsOptional()
-  maintRepairs?: MaintRepair;
+  maintRepairs?: Array<MaintRepair>;
 
   @ApiProperty({
     required: false,

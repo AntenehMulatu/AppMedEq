@@ -21,6 +21,7 @@ import {
   MaintRepair,
   SparePart,
   Ticket,
+  CompanyType,
 } from "@prisma/client";
 
 export class CompanyServiceBase {
@@ -133,5 +134,13 @@ export class CompanyServiceBase {
         where: { id: parentId },
       })
       .tickets(args);
+  }
+
+  async getCompanyType(parentId: string): Promise<CompanyType | null> {
+    return this.prisma.company
+      .findUnique({
+        where: { id: parentId },
+      })
+      .companyType();
   }
 }

@@ -15,12 +15,11 @@ import {
   IsString,
   IsOptional,
   IsNumber,
-  IsEnum,
   ValidateNested,
 } from "class-validator";
-import { EnumCompanyCompanyType } from "./EnumCompanyCompanyType";
-import { EmployeeUpdateManyWithoutCompaniesInput } from "./EmployeeUpdateManyWithoutCompaniesInput";
+import { CompanyTypeWhereUniqueInput } from "../../companyType/base/CompanyTypeWhereUniqueInput";
 import { Type } from "class-transformer";
+import { EmployeeUpdateManyWithoutCompaniesInput } from "./EmployeeUpdateManyWithoutCompaniesInput";
 import { EquidevUpdateManyWithoutCompaniesInput } from "./EquidevUpdateManyWithoutCompaniesInput";
 import { EquipmentSaleUpdateManyWithoutCompaniesInput } from "./EquipmentSaleUpdateManyWithoutCompaniesInput";
 import { InstallationUpdateManyWithoutCompaniesInput } from "./InstallationUpdateManyWithoutCompaniesInput";
@@ -75,14 +74,15 @@ class CompanyUpdateInput {
 
   @ApiProperty({
     required: false,
-    enum: EnumCompanyCompanyType,
+    type: () => CompanyTypeWhereUniqueInput,
   })
-  @IsEnum(EnumCompanyCompanyType)
+  @ValidateNested()
+  @Type(() => CompanyTypeWhereUniqueInput)
   @IsOptional()
-  @Field(() => EnumCompanyCompanyType, {
+  @Field(() => CompanyTypeWhereUniqueInput, {
     nullable: true,
   })
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyTypeWhereUniqueInput | null;
 
   @ApiProperty({
     required: false,

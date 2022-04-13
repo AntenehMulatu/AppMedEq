@@ -8,9 +8,12 @@ import {
   ReferenceInput,
   SelectInput,
   DateTimeInput,
+  ReferenceArrayInput,
+  SelectArrayInput,
 } from "react-admin";
 
 import { CompanyTitle } from "../company/CompanyTitle";
+import { EmployeeTitle } from "../employee/EmployeeTitle";
 import { EquidevTitle } from "../equidev/EquidevTitle";
 
 export const MaintRepairCreate = (props: CreateProps): React.ReactElement => {
@@ -26,6 +29,14 @@ export const MaintRepairCreate = (props: CreateProps): React.ReactElement => {
           <SelectInput optionText={CompanyTitle} />
         </ReferenceInput>
         <DateTimeInput label="DateOfCEOApproval" source="dateOfCeoApproval" />
+        <ReferenceArrayInput
+          source="employeeId"
+          reference="Employee"
+          parse={(value: any) => value && value.map((v: any) => ({ id: v }))}
+          format={(value: any) => value && value.map((v: any) => v.id)}
+        >
+          <SelectArrayInput optionText={EmployeeTitle} />
+        </ReferenceArrayInput>
         <ReferenceInput
           source="equidev.id"
           reference="Equidev"

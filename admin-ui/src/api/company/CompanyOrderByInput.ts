@@ -5,7 +5,7 @@ export type CompanyOrderByInput = {
   companyDepartment?: SortOrder;
   companyName?: SortOrder;
   companyPhone?: SortOrder;
-  companyType?: SortOrder;
+  companyTypeId?: SortOrder;
   createdAt?: SortOrder;
   id?: SortOrder;
   updatedAt?: SortOrder;

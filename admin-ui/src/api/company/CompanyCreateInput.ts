@@ -1,3 +1,4 @@
+import { CompanyTypeWhereUniqueInput } from "../companyType/CompanyTypeWhereUniqueInput";
 import { EmployeeCreateNestedManyWithoutCompaniesInput } from "./EmployeeCreateNestedManyWithoutCompaniesInput";
 import { EquidevCreateNestedManyWithoutCompaniesInput } from "./EquidevCreateNestedManyWithoutCompaniesInput";
 import { EquipmentSaleCreateNestedManyWithoutCompaniesInput } from "./EquipmentSaleCreateNestedManyWithoutCompaniesInput";
@@ -11,7 +12,7 @@ export type CompanyCreateInput = {
   companyDepartment: string;
   companyName: string;
   companyPhone: number;
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyTypeWhereUniqueInput | null;
   employees?: EmployeeCreateNestedManyWithoutCompaniesInput;
   equipments?: EquidevCreateNestedManyWithoutCompaniesInput;
   equipmentSales?: EquipmentSaleCreateNestedManyWithoutCompaniesInput;
