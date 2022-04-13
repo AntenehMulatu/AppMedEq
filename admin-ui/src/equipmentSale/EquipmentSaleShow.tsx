@@ -15,7 +15,6 @@ import {
 import { COMPANY_TITLE_FIELD } from "../company/CompanyTitle";
 import { EQUIPMENTSALE_TITLE_FIELD } from "./EquipmentSaleTitle";
 import { INSTALLATION_TITLE_FIELD } from "../installation/InstallationTitle";
-import { MAINTREPAIR_TITLE_FIELD } from "../maintRepair/MaintRepairTitle";
 import { EMPLOYEE_TITLE_FIELD } from "../employee/EmployeeTitle";
 
 export const EquipmentSaleShow = (props: ShowProps): React.ReactElement => {
@@ -72,13 +71,6 @@ export const EquipmentSaleShow = (props: ShowProps): React.ReactElement => {
               reference="Installation"
             >
               <TextField source={INSTALLATION_TITLE_FIELD} />
-            </ReferenceField>
-            <ReferenceField
-              label="MaintRepairs"
-              source="maintrepair.id"
-              reference="MaintRepair"
-            >
-              <TextField source={MAINTREPAIR_TITLE_FIELD} />
             </ReferenceField>
             <TextField label="ManufacturerName" source="manufacturerName" />
             <TextField label="Model" source="model" />

@@ -17,7 +17,6 @@ import { EQUIDEV_TITLE_FIELD } from "./EquidevTitle";
 import { TASKPLANNER_TITLE_FIELD } from "../taskPlanner/TaskPlannerTitle";
 import { EQUIPMENTSALE_TITLE_FIELD } from "../equipmentSale/EquipmentSaleTitle";
 import { INSTALLATION_TITLE_FIELD } from "../installation/InstallationTitle";
-import { MAINTREPAIR_TITLE_FIELD } from "../maintRepair/MaintRepairTitle";
 
 export const EquidevShow = (props: ShowProps): React.ReactElement => {
   return (
@@ -48,18 +47,52 @@ export const EquidevShow = (props: ShowProps): React.ReactElement => {
         >
           <TextField source={INSTALLATION_TITLE_FIELD} />
         </ReferenceField>
-        <ReferenceField
-          label="MaintRepairs"
-          source="maintrepair.id"
-          reference="MaintRepair"
-        >
-          <TextField source={MAINTREPAIR_TITLE_FIELD} />
-        </ReferenceField>
         <TextField label="ManufacturerName" source="manufacturerName" />
         <TextField label="Model" source="model" />
         <TextField label="SerialNumber" source="serialNumber" />
         <TextField label="ShipmentArrivalDate" source="shipmentArrivalDate" />
         <DateField source="updatedAt" label="Updated At" />
+        <ReferenceManyField
+          reference="MaintRepair"
+          target="EquidevId"
+          label="MaintRepairs"
+        >
+          <Datagrid rowClick="show">
+            <TextField label="ActionTaken" source="actionTaken" />
+            <ReferenceField
+              label="CompanyId"
+              source="company.id"
+              reference="Company"
+            >
+              <TextField source={COMPANY_TITLE_FIELD} />
+            </ReferenceField>
+            <DateField source="createdAt" label="Created At" />
+            <TextField label="DateOfCEOApproval" source="dateOfCeoApproval" />
+            <ReferenceField
+              label="EquipmentId"
+              source="equidev.id"
+              reference="Equidev"
+            >
+              <TextField source={EQUIDEV_TITLE_FIELD} />
+            </ReferenceField>
+            <TextField label="FaultType" source="faultType" />
+            <TextField label="ID" source="id" />
+            <TextField
+              label="LasttimeOfGoodOperation"
+              source="lasttimeOfGoodOperation"
+            />
+            <TextField
+              label="NameOfBMEApprovedMaintClearance"
+              source="nameOfBmeApprovedMaintClearance"
+            />
+            <TextField
+              label="NameOfTechMaintainEq"
+              source="nameOfTechMaintainEq"
+            />
+            <TextField label="PossibleCause" source="possibleCause" />
+            <DateField source="updatedAt" label="Updated At" />
+          </Datagrid>
+        </ReferenceManyField>
         <ReferenceManyField
           reference="SparePart"
           target="EquidevId"

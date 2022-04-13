@@ -1,7 +1,7 @@
 import { CompanyWhereUniqueInput } from "../company/CompanyWhereUniqueInput";
 import { EquipmentSaleWhereUniqueInput } from "../equipmentSale/EquipmentSaleWhereUniqueInput";
 import { InstallationWhereUniqueInput } from "../installation/InstallationWhereUniqueInput";
-import { MaintRepairWhereUniqueInput } from "../maintRepair/MaintRepairWhereUniqueInput";
+import { MaintRepairCreateNestedManyWithoutEquidevsInput } from "./MaintRepairCreateNestedManyWithoutEquidevsInput";
 import { SparePartCreateNestedManyWithoutEquidevsInput } from "./SparePartCreateNestedManyWithoutEquidevsInput";
 import { TicketCreateNestedManyWithoutEquidevsInput } from "./TicketCreateNestedManyWithoutEquidevsInput";
 
@@ -11,7 +11,7 @@ export type EquidevCreateInput = {
   equipmentSales?: EquipmentSaleWhereUniqueInput | null;
   hasSparePart?: boolean | null;
   installations?: InstallationWhereUniqueInput;
-  maintRepairs?: MaintRepairWhereUniqueInput;
+  maintRepairs?: MaintRepairCreateNestedManyWithoutEquidevsInput;
   manufacturerName?: string | null;
   model?: string | null;
   serialNumber?: string | null;

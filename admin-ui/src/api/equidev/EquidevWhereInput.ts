@@ -4,7 +4,7 @@ import { EquipmentSaleWhereUniqueInput } from "../equipmentSale/EquipmentSaleWhe
 import { BooleanNullableFilter } from "../../util/BooleanNullableFilter";
 import { StringFilter } from "../../util/StringFilter";
 import { InstallationWhereUniqueInput } from "../installation/InstallationWhereUniqueInput";
-import { MaintRepairWhereUniqueInput } from "../maintRepair/MaintRepairWhereUniqueInput";
+import { MaintRepairListRelationFilter } from "../maintRepair/MaintRepairListRelationFilter";
 import { DateTimeNullableFilter } from "../../util/DateTimeNullableFilter";
 import { SparePartListRelationFilter } from "../sparePart/SparePartListRelationFilter";
 import { TicketListRelationFilter } from "../ticket/TicketListRelationFilter";
@@ -16,7 +16,7 @@ export type EquidevWhereInput = {
   hasSparePart?: BooleanNullableFilter;
   id?: StringFilter;
   installations?: InstallationWhereUniqueInput;
-  maintRepairs?: MaintRepairWhereUniqueInput;
+  maintRepairs?: MaintRepairListRelationFilter;
   manufacturerName?: StringNullableFilter;
   model?: StringNullableFilter;
   serialNumber?: StringNullableFilter;

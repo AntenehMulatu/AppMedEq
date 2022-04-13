@@ -5,20 +5,20 @@ import {
   SimpleShowLayout,
   ShowProps,
   TextField,
+  ReferenceField,
   DateField,
   ReferenceManyField,
   Datagrid,
-  ReferenceField,
   BooleanField,
 } from "react-admin";
 
 import { COMPANY_TITLE_FIELD } from "./CompanyTitle";
 import { EQUIPMENTSALE_TITLE_FIELD } from "../equipmentSale/EquipmentSaleTitle";
 import { INSTALLATION_TITLE_FIELD } from "../installation/InstallationTitle";
-import { MAINTREPAIR_TITLE_FIELD } from "../maintRepair/MaintRepairTitle";
 import { EMPLOYEE_TITLE_FIELD } from "../employee/EmployeeTitle";
 import { EQUIDEV_TITLE_FIELD } from "../equidev/EquidevTitle";
 import { TASKPLANNER_TITLE_FIELD } from "../taskPlanner/TaskPlannerTitle";
+import { COMPANYTYPE_TITLE_FIELD } from "../companyType/CompanyTypeTitle";
 
 export const CompanyShow = (props: ShowProps): React.ReactElement => {
   return (
@@ -28,7 +28,13 @@ export const CompanyShow = (props: ShowProps): React.ReactElement => {
         <TextField label="CompanyDepartment" source="companyDepartment" />
         <TextField label="CompanyName" source="companyName" />
         <TextField label="CompanyPhone" source="companyPhone" />
-        <TextField label="CompanyType" source="companyType" />
+        <ReferenceField
+          label="CompanyType"
+          source="companytype.id"
+          reference="CompanyType"
+        >
+          <TextField source={COMPANYTYPE_TITLE_FIELD} />
+        </ReferenceField>
         <DateField source="createdAt" label="Created At" />
         <TextField label="ID" source="id" />
         <DateField source="updatedAt" label="Updated At" />
@@ -86,13 +92,6 @@ export const CompanyShow = (props: ShowProps): React.ReactElement => {
               reference="Installation"
             >
               <TextField source={INSTALLATION_TITLE_FIELD} />
-            </ReferenceField>
-            <ReferenceField
-              label="MaintRepairs"
-              source="maintrepair.id"
-              reference="MaintRepair"
-            >
-              <TextField source={MAINTREPAIR_TITLE_FIELD} />
             </ReferenceField>
             <TextField label="ManufacturerName" source="manufacturerName" />
             <TextField label="Model" source="model" />

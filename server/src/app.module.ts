@@ -9,6 +9,7 @@ import { MaintRepairModule } from "./maintRepair/maintRepair.module";
 import { SparePartModule } from "./sparePart/sparePart.module";
 import { TaskPlannerModule } from "./taskPlanner/taskPlanner.module";
 import { TicketModule } from "./ticket/ticket.module";
+import { CompanyTypeModule } from "./companyType/companyType.module";
 import { ACLModule } from "./auth/acl.module";
 import { AuthModule } from "./auth/auth.module";
 import { HealthModule } from "./health/health.module";
@@ -32,6 +33,7 @@ import { GraphQLModule } from "@nestjs/graphql";
     SparePartModule,
     TaskPlannerModule,
     TicketModule,
+    CompanyTypeModule,
     ACLModule,
     AuthModule,
     HealthModule,

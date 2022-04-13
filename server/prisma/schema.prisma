@@ -23,17 +23,18 @@ model Company {
   companyDepartment String
   companyName       String
   companyPhone      Float
-  companyType       EnumCompanyCompanyType?
-  createdAt         DateTime                @default(now())
+  companyType       CompanyType?    @relation(fields: [companyTypeId], references: [id])
+  companyTypeId     String?
+  createdAt         DateTime        @default(now())
   employees         Employee[]
   equipments        Equidev[]
   equipmentSales    EquipmentSale[]
-  id                String                  @id @default(cuid())
+  id                String          @id @default(cuid())
   installations     Installation[]
   maintRepairs      MaintRepair[]
   spareParts        SparePart[]
   tickets           Ticket[]
-  updatedAt         DateTime                @updatedAt
+  updatedAt         DateTime        @updatedAt
 }
 
 model Employee {
@@ -64,7 +65,7 @@ model Equidev {
   hasSparePart        Boolean?
   id                  String         @id @default(cuid())
   installations       Installation
-  maintRepairs        MaintRepair
+  maintRepairs        MaintRepair[]
   manufacturerName    String?
   model               String?
   serialNumber        String?
@@ -170,10 +171,14 @@ model Ticket {
   updatedAt          DateTime                @updatedAt
 }
 
-enum EnumCompanyCompanyType {
-  Customer
-  Supplier
-  Institution
+model CompanyType {
+  companies     Company[]
+  companyType   CompanyType   @relation(name: "CompanyTypeOnCompanyTypes", fields: [companyTypeId], references: [id])
+  companyTypeId String        @unique
+  companyTypes  CompanyType[] @relation(name: "CompanyTypeOnCompanyTypes")
+  createdAt     DateTime      @default(now())
+  id            String        @id @default(cuid())
+  updatedAt     DateTime      @updatedAt
 }
 
 enum EnumEmployeeEmployeePosition {

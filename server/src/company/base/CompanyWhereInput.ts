@@ -13,10 +13,10 @@ import { InputType, Field } from "@nestjs/graphql";
 import { ApiProperty } from "@nestjs/swagger";
 import { StringNullableFilter } from "../../util/StringNullableFilter";
 import { Type } from "class-transformer";
-import { IsOptional, IsEnum, ValidateNested } from "class-validator";
+import { IsOptional, ValidateNested } from "class-validator";
 import { StringFilter } from "../../util/StringFilter";
 import { FloatFilter } from "../../util/FloatFilter";
-import { EnumCompanyCompanyType } from "./EnumCompanyCompanyType";
+import { CompanyTypeWhereUniqueInput } from "../../companyType/base/CompanyTypeWhereUniqueInput";
 import { EmployeeListRelationFilter } from "../../employee/base/EmployeeListRelationFilter";
 import { EquidevListRelationFilter } from "../../equidev/base/EquidevListRelationFilter";
 import { EquipmentSaleListRelationFilter } from "../../equipmentSale/base/EquipmentSaleListRelationFilter";
@@ -72,14 +72,15 @@ class CompanyWhereInput {
 
   @ApiProperty({
     required: false,
-    enum: EnumCompanyCompanyType,
+    type: () => CompanyTypeWhereUniqueInput,
   })
-  @IsEnum(EnumCompanyCompanyType)
+  @ValidateNested()
+  @Type(() => CompanyTypeWhereUniqueInput)
   @IsOptional()
-  @Field(() => EnumCompanyCompanyType, {
+  @Field(() => CompanyTypeWhereUniqueInput, {
     nullable: true,
   })
-  companyType?: "Customer" | "Supplier" | "Institution";
+  companyType?: CompanyTypeWhereUniqueInput;
 
   @ApiProperty({
     required: false,

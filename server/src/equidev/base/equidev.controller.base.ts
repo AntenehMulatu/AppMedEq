@@ -27,6 +27,9 @@ import { EquidevWhereUniqueInput } from "./EquidevWhereUniqueInput";
 import { EquidevFindManyArgs } from "./EquidevFindManyArgs";
 import { EquidevUpdateInput } from "./EquidevUpdateInput";
 import { Equidev } from "./Equidev";
+import { MaintRepairFindManyArgs } from "../../maintRepair/base/MaintRepairFindManyArgs";
+import { MaintRepair } from "../../maintRepair/base/MaintRepair";
+import { MaintRepairWhereUniqueInput } from "../../maintRepair/base/MaintRepairWhereUniqueInput";
 import { SparePartFindManyArgs } from "../../sparePart/base/SparePartFindManyArgs";
 import { SparePart } from "../../sparePart/base/SparePart";
 import { SparePartWhereUniqueInput } from "../../sparePart/base/SparePartWhereUniqueInput";
@@ -96,12 +99,6 @@ export class EquidevControllerBase {
               connect: data.installations,
             }
           : undefined,
-
-        maintRepairs: data.maintRepairs
-          ? {
-              connect: data.maintRepairs,
-            }
-          : undefined,
       },
       select: {
         companyId: {
@@ -123,12 +120,6 @@ export class EquidevControllerBase {
         id: true,
 
         installations: {
-          select: {
-            id: true,
-          },
-        },
-
-        maintRepairs: {
           select: {
             id: true,
           },
@@ -196,12 +187,6 @@ export class EquidevControllerBase {
           },
         },
 
-        maintRepairs: {
-          select: {
-            id: true,
-          },
-        },
-
         manufacturerName: true,
         model: true,
         serialNumber: true,
@@ -258,12 +243,6 @@ export class EquidevControllerBase {
         id: true,
 
         installations: {
-          select: {
-            id: true,
-          },
-        },
-
-        maintRepairs: {
           select: {
             id: true,
           },
@@ -345,12 +324,6 @@ export class EquidevControllerBase {
                 connect: data.installations,
               }
             : undefined,
-
-          maintRepairs: data.maintRepairs
-            ? {
-                connect: data.maintRepairs,
-              }
-            : undefined,
         },
         select: {
           companyId: {
@@ -372,12 +345,6 @@ export class EquidevControllerBase {
           id: true,
 
           installations: {
-            select: {
-              id: true,
-            },
-          },
-
-          maintRepairs: {
             select: {
               id: true,
             },
@@ -445,12 +412,6 @@ export class EquidevControllerBase {
             },
           },
 
-          maintRepairs: {
-            select: {
-              id: true,
-            },
-          },
-
           manufacturerName: true,
           model: true,
           serialNumber: true,
@@ -466,6 +427,202 @@ export class EquidevControllerBase {
       }
       throw error;
     }
+  }
+
+  @common.UseInterceptors(nestMorgan.MorganInterceptor("combined"))
+  @common.UseGuards(
+    defaultAuthGuard.DefaultAuthGuard,
+    nestAccessControl.ACGuard
+  )
+  @common.Get("/:id/maintRepairs")
+  @nestAccessControl.UseRoles({
+    resource: "Equidev",
+    action: "read",
+    possession: "any",
+  })
+  @ApiNestedQuery(MaintRepairFindManyArgs)
+  async findManyMaintRepairs(
+    @common.Req() request: Request,
+    @common.Param() params: EquidevWhereUniqueInput,
+    @nestAccessControl.UserRoles() userRoles: string[]
+  ): Promise<MaintRepair[]> {
+    const query = plainToClass(MaintRepairFindManyArgs, request.query);
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "read",
+      possession: "any",
+      resource: "MaintRepair",
+    });
+    const results = await this.service.findMaintRepairs(params.id, {
+      ...query,
+      select: {
+        actionTaken: true,
+
+        companyId: {
+          select: {
+            id: true,
+          },
+        },
+
+        createdAt: true,
+        dateOfCeoApproval: true,
+
+        equipmentId: {
+          select: {
+            id: true,
+          },
+        },
+
+        faultType: true,
+        id: true,
+        lasttimeOfGoodOperation: true,
+        nameOfBmeApprovedMaintClearance: true,
+        nameOfTechMaintainEq: true,
+        possibleCause: true,
+        updatedAt: true,
+      },
+    });
+    if (results === null) {
+      throw new errors.NotFoundException(
+        `No resource was found for ${JSON.stringify(params)}`
+      );
+    }
+    return results.map((result) => permission.filter(result));
+  }
+
+  @common.UseInterceptors(nestMorgan.MorganInterceptor("combined"))
+  @common.UseGuards(
+    defaultAuthGuard.DefaultAuthGuard,
+    nestAccessControl.ACGuard
+  )
+  @common.Post("/:id/maintRepairs")
+  @nestAccessControl.UseRoles({
+    resource: "Equidev",
+    action: "update",
+    possession: "any",
+  })
+  async createMaintRepairs(
+    @common.Param() params: EquidevWhereUniqueInput,
+    @common.Body() body: EquidevWhereUniqueInput[],
+    @nestAccessControl.UserRoles() userRoles: string[]
+  ): Promise<void> {
+    const data = {
+      maintRepairs: {
+        connect: body,
+      },
+    };
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "update",
+      possession: "any",
+      resource: "Equidev",
+    });
+    const invalidAttributes = abacUtil.getInvalidAttributes(permission, data);
+    if (invalidAttributes.length) {
+      const roles = userRoles
+        .map((role: string) => JSON.stringify(role))
+        .join(",");
+      throw new common.ForbiddenException(
+        `Updating the relationship: ${
+          invalidAttributes[0]
+        } of ${"Equidev"} is forbidden for roles: ${roles}`
+      );
+    }
+    await this.service.update({
+      where: params,
+      data,
+      select: { id: true },
+    });
+  }
+
+  @common.UseInterceptors(nestMorgan.MorganInterceptor("combined"))
+  @common.UseGuards(
+    defaultAuthGuard.DefaultAuthGuard,
+    nestAccessControl.ACGuard
+  )
+  @common.Patch("/:id/maintRepairs")
+  @nestAccessControl.UseRoles({
+    resource: "Equidev",
+    action: "update",
+    possession: "any",
+  })
+  async updateMaintRepairs(
+    @common.Param() params: EquidevWhereUniqueInput,
+    @common.Body() body: MaintRepairWhereUniqueInput[],
+    @nestAccessControl.UserRoles() userRoles: string[]
+  ): Promise<void> {
+    const data = {
+      maintRepairs: {
+        set: body,
+      },
+    };
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "update",
+      possession: "any",
+      resource: "Equidev",
+    });
+    const invalidAttributes = abacUtil.getInvalidAttributes(permission, data);
+    if (invalidAttributes.length) {
+      const roles = userRoles
+        .map((role: string) => JSON.stringify(role))
+        .join(",");
+      throw new common.ForbiddenException(
+        `Updating the relationship: ${
+          invalidAttributes[0]
+        } of ${"Equidev"} is forbidden for roles: ${roles}`
+      );
+    }
+    await this.service.update({
+      where: params,
+      data,
+      select: { id: true },
+    });
+  }
+
+  @common.UseInterceptors(nestMorgan.MorganInterceptor("combined"))
+  @common.UseGuards(
+    defaultAuthGuard.DefaultAuthGuard,
+    nestAccessControl.ACGuard
+  )
+  @common.Delete("/:id/maintRepairs")
+  @nestAccessControl.UseRoles({
+    resource: "Equidev",
+    action: "update",
+    possession: "any",
+  })
+  async deleteMaintRepairs(
+    @common.Param() params: EquidevWhereUniqueInput,
+    @common.Body() body: EquidevWhereUniqueInput[],
+    @nestAccessControl.UserRoles() userRoles: string[]
+  ): Promise<void> {
+    const data = {
+      maintRepairs: {
+        disconnect: body,
+      },
+    };
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "update",
+      possession: "any",
+      resource: "Equidev",
+    });
+    const invalidAttributes = abacUtil.getInvalidAttributes(permission, data);
+    if (invalidAttributes.length) {
+      const roles = userRoles
+        .map((role: string) => JSON.stringify(role))
+        .join(",");
+      throw new common.ForbiddenException(
+        `Updating the relationship: ${
+          invalidAttributes[0]
+        } of ${"Equidev"} is forbidden for roles: ${roles}`
+      );
+    }
+    await this.service.update({
+      where: params,
+      data,
+      select: { id: true },
+    });
   }
 
   @common.UseInterceptors(nestMorgan.MorganInterceptor("combined"))

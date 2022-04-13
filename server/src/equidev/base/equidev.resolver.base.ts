@@ -25,6 +25,8 @@ import { DeleteEquidevArgs } from "./DeleteEquidevArgs";
 import { EquidevFindManyArgs } from "./EquidevFindManyArgs";
 import { EquidevFindUniqueArgs } from "./EquidevFindUniqueArgs";
 import { Equidev } from "./Equidev";
+import { MaintRepairFindManyArgs } from "../../maintRepair/base/MaintRepairFindManyArgs";
+import { MaintRepair } from "../../maintRepair/base/MaintRepair";
 import { SparePartFindManyArgs } from "../../sparePart/base/SparePartFindManyArgs";
 import { SparePart } from "../../sparePart/base/SparePart";
 import { TicketFindManyArgs } from "../../ticket/base/TicketFindManyArgs";
@@ -32,7 +34,6 @@ import { Ticket } from "../../ticket/base/Ticket";
 import { Company } from "../../company/base/Company";
 import { EquipmentSale } from "../../equipmentSale/base/EquipmentSale";
 import { Installation } from "../../installation/base/Installation";
-import { MaintRepair } from "../../maintRepair/base/MaintRepair";
 import { EquidevService } from "../equidev.service";
 
 @graphql.Resolver(() => Equidev)
@@ -159,12 +160,6 @@ export class EquidevResolverBase {
               connect: args.data.installations,
             }
           : undefined,
-
-        maintRepairs: args.data.maintRepairs
-          ? {
-              connect: args.data.maintRepairs,
-            }
-          : undefined,
       },
     });
   }
@@ -224,12 +219,6 @@ export class EquidevResolverBase {
                 connect: args.data.installations,
               }
             : undefined,
-
-          maintRepairs: args.data.maintRepairs
-            ? {
-                connect: args.data.maintRepairs,
-              }
-            : undefined,
         },
       });
     } catch (error) {
@@ -262,6 +251,32 @@ export class EquidevResolverBase {
       }
       throw error;
     }
+  }
+
+  @graphql.ResolveField(() => [MaintRepair])
+  @nestAccessControl.UseRoles({
+    resource: "Equidev",
+    action: "read",
+    possession: "any",
+  })
+  async maintRepairs(
+    @graphql.Parent() parent: Equidev,
+    @graphql.Args() args: MaintRepairFindManyArgs,
+    @gqlUserRoles.UserRoles() userRoles: string[]
+  ): Promise<MaintRepair[]> {
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "read",
+      possession: "any",
+      resource: "MaintRepair",
+    });
+    const results = await this.service.findMaintRepairs(parent.id, args);
+
+    if (!results) {
+      return [];
+    }
+
+    return results.map((result) => permission.filter(result));
   }
 
   @graphql.ResolveField(() => [SparePart])
@@ -381,30 +396,6 @@ export class EquidevResolverBase {
       resource: "Installation",
     });
     const result = await this.service.getInstallations(parent.id);
-
-    if (!result) {
-      return null;
-    }
-    return permission.filter(result);
-  }
-
-  @graphql.ResolveField(() => MaintRepair, { nullable: true })
-  @nestAccessControl.UseRoles({
-    resource: "Equidev",
-    action: "read",
-    possession: "any",
-  })
-  async maintRepairs(
-    @graphql.Parent() parent: Equidev,
-    @gqlUserRoles.UserRoles() userRoles: string[]
-  ): Promise<MaintRepair | null> {
-    const permission = this.rolesBuilder.permission({
-      role: userRoles,
-      action: "read",
-      possession: "any",
-      resource: "MaintRepair",
-    });
-    const result = await this.service.getMaintRepairs(parent.id);
 
     if (!result) {
       return null;

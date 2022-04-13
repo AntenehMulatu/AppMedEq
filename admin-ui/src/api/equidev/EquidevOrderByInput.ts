@@ -8,7 +8,6 @@ export type EquidevOrderByInput = {
   hasSparePart?: SortOrder;
   id?: SortOrder;
   installationsId?: SortOrder;
-  maintRepairsId?: SortOrder;
   manufacturerName?: SortOrder;
   model?: SortOrder;
   serialNumber?: SortOrder;

@@ -15,11 +15,10 @@ import {
   IsString,
   IsOptional,
   IsNumber,
-  IsEnum,
-  IsDate,
   ValidateNested,
+  IsDate,
 } from "class-validator";
-import { EnumCompanyCompanyType } from "./EnumCompanyCompanyType";
+import { CompanyType } from "../../companyType/base/CompanyType";
 import { Type } from "class-transformer";
 import { Employee } from "../../employee/base/Employee";
 import { Equidev } from "../../equidev/base/Equidev";
@@ -67,14 +66,12 @@ class Company {
 
   @ApiProperty({
     required: false,
-    enum: EnumCompanyCompanyType,
+    type: () => CompanyType,
   })
-  @IsEnum(EnumCompanyCompanyType)
+  @ValidateNested()
+  @Type(() => CompanyType)
   @IsOptional()
-  @Field(() => EnumCompanyCompanyType, {
-    nullable: true,
-  })
-  companyType?: "Customer" | "Supplier" | "Institution" | null;
+  companyType?: CompanyType | null;
 
   @ApiProperty({
     required: true,

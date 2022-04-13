@@ -88,15 +88,6 @@ class EquidevOrderByInput {
   @Field(() => SortOrder, {
     nullable: true,
   })
-  maintRepairsId?: SortOrder;
-
-  @ApiProperty({
-    required: false,
-    enum: ["asc", "desc"],
-  })
-  @Field(() => SortOrder, {
-    nullable: true,
-  })
   manufacturerName?: SortOrder;
 
   @ApiProperty({

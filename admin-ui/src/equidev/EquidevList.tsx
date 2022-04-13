@@ -14,7 +14,6 @@ import Pagination from "../Components/Pagination";
 import { COMPANY_TITLE_FIELD } from "../company/CompanyTitle";
 import { EQUIPMENTSALE_TITLE_FIELD } from "../equipmentSale/EquipmentSaleTitle";
 import { INSTALLATION_TITLE_FIELD } from "../installation/InstallationTitle";
-import { MAINTREPAIR_TITLE_FIELD } from "../maintRepair/MaintRepairTitle";
 
 export const EquidevList = (props: ListProps): React.ReactElement => {
   return (
@@ -50,13 +49,6 @@ export const EquidevList = (props: ListProps): React.ReactElement => {
           reference="Installation"
         >
           <TextField source={INSTALLATION_TITLE_FIELD} />
-        </ReferenceField>
-        <ReferenceField
-          label="MaintRepairs"
-          source="maintrepair.id"
-          reference="MaintRepair"
-        >
-          <TextField source={MAINTREPAIR_TITLE_FIELD} />
         </ReferenceField>
         <TextField label="ManufacturerName" source="manufacturerName" />
         <TextField label="Model" source="model" />

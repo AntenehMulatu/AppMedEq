@@ -14,12 +14,12 @@ import { PrismaService } from "nestjs-prisma";
 import {
   Prisma,
   Equidev,
+  MaintRepair,
   SparePart,
   Ticket,
   Company,
   EquipmentSale,
   Installation,
-  MaintRepair,
 } from "@prisma/client";
 
 export class EquidevServiceBase {
@@ -55,6 +55,17 @@ export class EquidevServiceBase {
     args: Prisma.SelectSubset<T, Prisma.EquidevDeleteArgs>
   ): Promise<Equidev> {
     return this.prisma.equidev.delete(args);
+  }
+
+  async findMaintRepairs(
+    parentId: string,
+    args: Prisma.MaintRepairFindManyArgs
+  ): Promise<MaintRepair[]> {
+    return this.prisma.equidev
+      .findUnique({
+        where: { id: parentId },
+      })
+      .maintRepairs(args);
   }
 
   async findSpareParts(
@@ -101,13 +112,5 @@ export class EquidevServiceBase {
         where: { id: parentId },
       })
       .installations();
-  }
-
-  async getMaintRepairs(parentId: string): Promise<MaintRepair | null> {
-    return this.prisma.equidev
-      .findUnique({
-        where: { id: parentId },
-      })
-      .maintRepairs();
   }
 }

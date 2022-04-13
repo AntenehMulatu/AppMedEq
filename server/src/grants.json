@@ -1366,5 +1366,245 @@
     "resource": "Ticket",
     "action": "read:any",
     "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "CompanyType",
+    "action": "read:own",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "CompanyType",
+    "action": "create:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "CompanyType",
+    "action": "update:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "CompanyType",
+    "action": "delete:any",
+    "attributes": "*"
+  },
+  {
+    "role": "salesPerson",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "bmeSupervisor",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "inventoryManager",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "ceo",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "user",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "admin",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "serviceManager",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
+  },
+  {
+    "role": "manager",
+    "resource": "CompanyType",
+    "action": "read:any",
+    "attributes": "*"
   }
 ]

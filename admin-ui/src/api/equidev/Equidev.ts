@@ -13,7 +13,7 @@ export type Equidev = {
   hasSparePart: boolean | null;
   id: string;
   installations?: Installation;
-  maintRepairs?: MaintRepair;
+  maintRepairs?: Array<MaintRepair>;
   manufacturerName: string | null;
   model: string | null;
   serialNumber: string | null;

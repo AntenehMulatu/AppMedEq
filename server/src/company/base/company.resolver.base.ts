@@ -39,6 +39,7 @@ import { SparePartFindManyArgs } from "../../sparePart/base/SparePartFindManyArg
 import { SparePart } from "../../sparePart/base/SparePart";
 import { TicketFindManyArgs } from "../../ticket/base/TicketFindManyArgs";
 import { Ticket } from "../../ticket/base/Ticket";
+import { CompanyType } from "../../companyType/base/CompanyType";
 import { CompanyService } from "../company.service";
 
 @graphql.Resolver(() => Company)
@@ -145,7 +146,15 @@ export class CompanyResolverBase {
     // @ts-ignore
     return await this.service.create({
       ...args,
-      data: args.data,
+      data: {
+        ...args.data,
+
+        companyType: args.data.companyType
+          ? {
+              connect: args.data.companyType,
+            }
+          : undefined,
+      },
     });
   }
 
@@ -184,7 +193,15 @@ export class CompanyResolverBase {
       // @ts-ignore
       return await this.service.update({
         ...args,
-        data: args.data,
+        data: {
+          ...args.data,
+
+          companyType: args.data.companyType
+            ? {
+                connect: args.data.companyType,
+              }
+            : undefined,
+        },
       });
     } catch (error) {
       if (isRecordNotFoundError(error)) {
@@ -398,5 +415,29 @@ export class CompanyResolverBase {
     }
 
     return results.map((result) => permission.filter(result));
+  }
+
+  @graphql.ResolveField(() => CompanyType, { nullable: true })
+  @nestAccessControl.UseRoles({
+    resource: "Company",
+    action: "read",
+    possession: "any",
+  })
+  async companyType(
+    @graphql.Parent() parent: Company,
+    @gqlUserRoles.UserRoles() userRoles: string[]
+  ): Promise<CompanyType | null> {
+    const permission = this.rolesBuilder.permission({
+      role: userRoles,
+      action: "read",
+      possession: "any",
+      resource: "CompanyType",
+    });
+    const result = await this.service.getCompanyType(parent.id);
+
+    if (!result) {
+      return null;
+    }
+    return permission.filter(result);
   }
 }
